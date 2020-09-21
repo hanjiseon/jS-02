@@ -42,9 +42,9 @@ int main(void)
 	int nx = sizeof(x) / sizeof(x[0]); 		
 	int vdist[VMAX]; 				
 
-	puts("■ □ ■  신체검사 표  ■ □ ■");
-	puts("    이름            키   시력  ");
-	puts("----------------------------");
+	puts("■ □ ■ 신체검사 표 ■ □ ■");
+	puts("    이름            키   시력 ");
+	puts("---------------------------");
 
 	for (i = 0; i < nx; i++)
 		printf("%-18.18s%4d%5.1f\n", x[i].name, x[i].height, x[i].vision);
