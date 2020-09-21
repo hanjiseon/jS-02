@@ -29,26 +29,27 @@ void dist_vision(const PhysCheck dat[], int n, int dist[])
 		{
 			int i;
 			PhysCheck x[] = {
-				{"¹ÚÇö±Ô", 162,0.3},
-				{"ÇÔÁø¾Æ", 173,0.7},
-				{"ÃÖÀ±¹Ì", 175,2.0},
-				{"È«¿¬ÀÇ", 171,1.5},
-				{"ÀÌ¼öÁø", 168,0.4},
-				{"±è¿µÁØ",174,1.2},
-				{"¹Ú¿ë±Ô",169,0.8}
+				{"ë°•í˜„ê·œ", 162,0.3},
+				{"í•¨ì§„ì•„", 173,0.7},
+				{"ìµœìœ¤ë¯¸", 175,2.0},
+				{"í™ì—°ì˜", 171,1.5},
+				{"ì´ìˆ˜ì§„", 168,0.4},
+				{"ê¹€ì˜ì¤€",174,1.2},
+				{"ë°•ìš©ê·œ",169,0.8}
 
 				};
 			int nx = sizeof(x) / sizeof(x[0]);
 			int vidist[VMAX];
-			puts("½ÅÃ¼°Ë»çÇ¥");
-			puts("   ÀÌ¸§      Å° ½Ã·Â");
+			puts("ì‹ ì²´ê²€ì‚¬í‘œ");
+			puts("   ì´ë¦„      í‚¤ ì‹œë ¥");
 			puts("_______________________");
 			for (i = 0; i < nx; i++);
 			printf("%_8.18s%4d5.1f\n", x[i].name, x[i].height, x[i].vision);
-			printf("\n Æò±Õ Å°: %5.1f cm\n", ave_height(x, nx));
-			printf("\n½Ã·ÂºĞÆ÷\n");
+			printf("\n í‰ê·  í‚¤: %5.1f cm\n", ave_height(x, nx));
+			dist_vision(x, nx, vdist);
+			printf("\nì‹œë ¥ë¶„í¬\n");
 			for (i = 0; i < VMAX; i++)
-				printf("%3.1f ~: %2d¸í\n", i/10.0, vdist[i]);
+				printf("%3.1f ~: %2dëª…\n", i/10.0, vdist[i]);
 
 			return 0;
 
